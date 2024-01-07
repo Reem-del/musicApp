@@ -1,0 +1,54 @@
+/* chrome and opera */
+/* for edge,firefox */
+.scrolly::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+  }
+  .scrolly::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+  }
+  .scrolly::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  }
+.trans{animation-name:showUp;animation-duration:2s}
+@keyframes showUp{
+  from {opacity :0 ; bottom:-50%}
+   to {opacity :1; bottom:0}
+}
+@keyframes showside{
+  from {opacity :0 ; left:-100%}
+   to {opacity :1; left:0}
+}
+
+
+@media only screen and (max-width: 700px) {
+  .hide{
+     display: none;
+    }
+  .sidemenu{
+    position:absolute;left:0;z-index: 30
+  }
+  .show {
+    display:flex;justify-content: center;
+  }
+  .transmenu{
+    animation-name:showside;animation-duration:2s}
+  .fit {width:100%}
+  
+@keyframes showside{
+  from {opacity :0 ; left:-100%}
+   to {opacity :1; left:0}
+} }
+
+   @media only screen and (min-width:690px) {
+     .hiding{
+        display: none;}
+     .full {width:100%}
+      }
+     
+         
+ 
+ 
+   
+
