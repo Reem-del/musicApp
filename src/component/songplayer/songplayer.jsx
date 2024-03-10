@@ -49,17 +49,21 @@ export default function SongPlayer() {
    }
   
     return (
-        <div className='relative flex flex-row  gap-2 h-full rounded-sm'>
+        <div className='relative flex flex-row gap-2 w-full '>
              <IoMdClose  className='absolute top-3 right-3 text-yellow-200 ' onClick={()=>dispatch(removeActiveSong())}/>
-            <img src={`${activeSong?.images.coverart ? activeSong.images.coverart : activeSong.images.default}`} alt='img1'/> 
-            <div className='relative flex flex-col w-3/4'>
+             <div className='sm:w-1/4 max-sm:w-24 h-full pt-2'>
+            <img src={`${activeSong?.images.coverart ? activeSong.images.coverart : activeSong.images.default}`} alt='img1' className='sm:w-fit max-sm:rounded-full'/>
+            </div> 
+            <div className='flex flex-col w-3/4'>
             <p className='py-2 font-serif text-lg  text-yellow-200'>{activeSong.title}</p>
            
             <Seekbar 
             value={appTime} 
             min='0'
             max={duration}
-            onInput={(e)=>setSeekTime(e.target.value)} />
+            onInput={(e)=>setSeekTime(e.target.value)} 
+            className='w-full' />
+            
           
             <Control 
             isPLay={isPlaying}
@@ -85,7 +89,7 @@ export default function SongPlayer() {
             />
             </div>
                 
-          <div className='absolute top-[68%] -right-1 hide'>
+          <div className='absolute top-[72%] -right-1 m-2 hide'>
           <Volume
             value={volume} 
             min='0'

@@ -4,7 +4,7 @@ import {BiSkipNextCircle,BiSkipPreviousCircle,BiShuffle} from "react-icons/bi";
 
 function Control({isPLay,playpause,setRepeate,nextSong,prevSong,setShuffle,shuffle,repeat}) {
     return (
-        <div className='flex flex-row justify-around mt-2 text-[#9797df]'>
+        <div className='flex flex-row justify-around sm:m-2 text-[#9797df] max-sm:m-4'>
        <BsArrowRepeat color={repeat ? 'red ' : undefined}  onClick={setRepeate} size={25} />
        <BiSkipPreviousCircle  size={25} onClick={prevSong} />
        {isPLay ? <BsPauseCircleFill size={30}  onClick={playpause}/> : <BsPlayCircleFill   size={30}  onClick={playpause}/>}

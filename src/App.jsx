@@ -51,16 +51,16 @@ useEffect(()=>{setTimeout(() => {
     </Routes>
     </div>
     {isActive && 
-    <div className='absolute trans w-[600px] bottom-0 h-28 z-10 bg-[#191624] max-xs:w-full '>
+    <div className='absolute trans w-[600px] bottom-0 min-sm:h-28 z-10 bg-[#191624] max-sm:w-full h-fit'>
      <SongPlayer />
 
     </div>}
    
     </div>
     
-    <div className='flex flex-col gap-6 w-[300px] bg-[#121286] '>
-     <div className='mt-12 h-3/4 overflow-y-scroll scrolly'><Recomended /></div>
-     <div className='h-1/4 mt-5'><TopArtist /></div>
+    <div className='flex flex-col w-[300px] bg-[#121286] '>
+     <div className='mt-12 overflow-y-scroll scrolly'><Recomended /></div>
+     <div className=' mt-8'><TopArtist /></div>
     
     </div>
     

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Seekbar({value,min,max,onInput}) {
+function Seekbar({value,min,max,onInput,className}) {
     function getTime(t){
        
          return Number(t) !==0 ? `0${Math.floor(t/60)}:${Math.floor(t % 60)}` : '00:00';
@@ -16,7 +16,7 @@ function Seekbar({value,min,max,onInput}) {
         max={max}
         value={value}
         onInput={onInput}
-        className='w-[800px]'
+        className={className}
        
 />
       <p className='px-2'>{getTime(max)}</p>

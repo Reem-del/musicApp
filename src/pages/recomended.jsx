@@ -27,7 +27,7 @@ function Recomended() {
   
     return (
         <div className='flex flex-col hide '>
-          <h3 className='text-white'>{loading ? `Related Songs` : <Skeleton width={80} height={20}/>} </h3>
+          <h3 className='text-xl text-yellow-200 mb-3 '>{loading ? `Related Songs` : <Skeleton width={80} height={20}/>} </h3>
           {res.map((track,i)=><Relatedsongcard key={i} song={track} collection={res} i={i} />)}  
         </div>
     )

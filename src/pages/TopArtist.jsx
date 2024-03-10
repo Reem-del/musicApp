@@ -11,9 +11,9 @@ export default function TopArtist() {
     
     
     return (
-        <div className='overflow-x-scroll scrolly'>
-        <h3 className='text-white '>{loading ? `Top Artists` : <Skeleton />} </h3>
-        <div className='sm:flex flex-row  gap-4 h-48 mt-6 xs:flex-col'>
+        <div >
+        <h3 className='text-xl text-yellow-200 sticky '>{loading ? `Top Artists` : <Skeleton />} </h3>
+        <div className='sm:flex flex-row  gap-4 h-48 mt-6 xs:flex-col overflow-x-scroll scrolly '>
             {loading ? 
        arr.map(ele=><img key={ele.id} src={ele.src} alt='img3' className='rounded-full w-24 h-24' />): <Skeletonimg num={arr.length}  />}
         
