@@ -33,7 +33,7 @@ const {isPlaying,activeSong}=useSelector(state=>state.musicPlayer)
         <div className='flex flex-col w-36  text-yellow-200 bg-white/5 bg-opacity-80 text-center' >
         <div className='relative'>
         <img src='R.jpg' alt={song.attributes.name}  className='w-full ' onClick={handleSelect} />
-      <img src='/images/output-onlinegiftools.gif' alt='img1' className={`${isPlaying && activeSong.key === song.key ? `absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%]` : `hidden`}`} />
+      <img src='/images/output-onlinegiftools.gif' alt='img1' className={`${isPlaying && activeSong.id === song.id ? `absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%]` : `hidden`}`} />
       {!isFav ? <HiOutlineHeart className='absolute z-10 right-2 top-2' onClick={()=>dispatch(addSong(song))} /> : <HiHeart className='absolute z-10 right-2 top-2' onClick={()=>dispatch(removeSong(song))} />} 
         </div>
         <p className='pt-3 mb-2 text-sm truncate text-bold'>{song.attributes.name}</p> 
