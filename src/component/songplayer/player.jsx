@@ -21,7 +21,7 @@ function Player({isPlaying,volume,seekTime,onEnded,repeat,onLoadedData,onTimeUpd
     return (
       
         <audio
-        src={activeSong?.hub?.actions[1]?.uri}
+        src={activeSong.attributes ? activeSong.attributes.previews[0].url : activeSong.url}
         ref={songref}
         loop={repeat}
         onEnded={onEnded}

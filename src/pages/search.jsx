@@ -9,10 +9,12 @@ export default function Search() {
    const compurl='search';
    const param={term:searchval,
    limit: '5'}
+
+   
    const [res,setRes]=useState([]);
     useEffect(()=>{
       Source(compurl,param)
-      .then((data) => setRes(data.tracks.hits))
+      .then((data) => setRes(data.data.tracks.hits))
       .catch((err) => console.log(err));
   },[searchval]);
   console.log(res)

@@ -24,7 +24,7 @@ import countreycode from '../countrey.json';
         }
         useEffect(() => {
           Source(compurl,params)
-            .then((data) => setResult(data?.tracks))
+            .then((data) => setResult(data?.data))
             .catch((err) => console.log(err));
         },[countrey]);
         
@@ -42,7 +42,7 @@ import countreycode from '../countrey.json';
              
               </div>
               <div className='flex flex-row flex-wrap mt-5 mx-3 gap-5 overflow-y-hidden hide-scrollbar'>
-              {result?.map((track,i)=><SongCard song={track} collection={result} i={i} />)}
+              {result?.map((track,i)=><SongCard song={track} key={i} collection={result} i={i} />)}
               </div>
                
               </div>

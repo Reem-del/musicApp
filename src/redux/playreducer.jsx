@@ -15,6 +15,7 @@ import { createSlice } from "@reduxjs/toolkit";
             state.activeSong=action.payload.song;
             state.collection=action.payload.collection;
             state.currentIndex=action.payload.i;
+            state.relatedId=action.payload.song.id
             state.isPlaying=true;
             state.isActive=true;
 
@@ -33,13 +34,11 @@ import { createSlice } from "@reduxjs/toolkit";
     playpause(state,action){
         state.isPlaying=action.payload;
     },
-    changeRelatedId(state,action){
-        state.relatedId=action.payload.key;
-    },
+    
     removeActiveSong(state){
         state.activeSong='';
         state.isActive=false;
     }
 }});
-export const {setactiveSong,nextSong,prevSong,playpause,changeRelatedId,removeActiveSong}=playerSlice.actions;
+export const {setactiveSong,nextSong,prevSong,playpause,removeActiveSong}=playerSlice.actions;
 export default playerSlice.reducer;

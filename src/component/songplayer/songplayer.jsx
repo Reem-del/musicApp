@@ -51,11 +51,11 @@ export default function SongPlayer() {
     return (
         <div className='relative flex flex-row gap-2 w-full '>
              <IoMdClose  className='absolute top-3 right-3 text-yellow-200 ' onClick={()=>dispatch(removeActiveSong())}/>
-             <div className='sm:w-1/4 max-sm:w-24 h-full pt-2'>
-            <img src={`${activeSong?.images.coverart ? activeSong.images.coverart : activeSong.images.default}`} alt='img1' className='sm:w-fit max-sm:rounded-full'/>
+             <div className='sm:w-1/4 h-full pt-2'>
+            <img src={`${activeSong?.attributes?.artwork.url ? activeSong.attributes.artwork.url  : activeSong.images.default}`} alt='img1' className='sm:w-fit max-sm:rounded-full'/>
             </div> 
             <div className='flex flex-col w-3/4'>
-            <p className='py-2 font-serif text-lg  text-yellow-200'>{activeSong.title}</p>
+            <p className='py-2 font-serif text-lg  text-yellow-200'>{`${activeSong.attributes?  activeSong.attributes.name : activeSong.alias}`}</p>
            
             <Seekbar 
             value={appTime} 
