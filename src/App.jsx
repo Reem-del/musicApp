@@ -29,12 +29,12 @@ useEffect(()=>{setTimeout(() => {
 },3000)},[])
 
   return (
-    <div className='flex relative '>
+    <div className='flex relative h-[100vh] '>
     <div className={`w-[250px] bg-[#191624] text-white  ${open ? `sidemenu transmenu` : `hide`}`}>
     <IoMdClose className='absolute top-2 right-2 w-14 hiding' onClick={()=>dispatch(setOpen(false))} />
     <Sidebar />
     </div>
-    <div className='w-[900px]  bg-gradient-to-r from-black to-[#121286] '>
+    <div className='w-[900px] bg-gradient-to-r from-black to-[#121286] '>
       <div className='hiding '>
         <img src='images/music-removebg-preview.png' onClick={()=>dispatch(setOpen(true))} alt='log' className='w-32 h-32 '/>
       </div>
