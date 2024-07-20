@@ -29,7 +29,7 @@ useEffect(()=>{setTimeout(() => {
 },3000)},[])
 
   return (
-    <div className='flex relative h[100vh]'>
+    <div className='flex relative '>
     <div className={`w-[250px] bg-[#191624] text-white  ${open ? `sidemenu transmenu` : `hide`}`}>
     <IoMdClose className='absolute top-2 right-2 w-14 hiding' onClick={()=>dispatch(setOpen(false))} />
     <Sidebar />
