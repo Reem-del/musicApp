@@ -8,7 +8,7 @@ export const Source=async(compurl,paramter) => {
        params:paramter
       ,
         headers: {
-          'X-RapidAPI-Key':import.meta.env.VITE_KEY,
+          'X-RapidAPI-Key':'2415a61d62msh11d7f9a676b9673p13d940jsn54cd15aa08e7',
           'X-RapidAPI-Host': 'shazam-api7.p.rapidapi.com'
          
         }

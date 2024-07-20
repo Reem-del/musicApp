@@ -12,7 +12,7 @@ export default function TopArtist() {
     
     return (
         <div >
-        <h3 className='text-xl text-yellow-200 sticky '>{loading ? `Top Artists` : <Skeleton />} </h3>
+        <p className='text-lg text-yellow-200 sticky '>{loading ? `Top Artists` : <Skeleton />} </p>
         <div className='flex flex-col  gap-4 h-48 mt-6 overflow-x-scroll scrolly '>
             {loading ? 
        arr.map(ele=><img key={ele.id} src={ele.src} alt='img3' className='rounded-full w-24 h-24' />): <Skeletonimg num={arr.length}  />}
