@@ -41,7 +41,7 @@ useEffect(()=>{setTimeout(() => {
 
     <Searchbar  />
 
-    <div className='h-[calc-(100vh - 8px)] relative'>
+    <div className='h-[calc-(100vh - 8px)] relative xs:h-screen'>
     <Routes>
     <Route exact path='/' element={<Topchart />} />
     <Route exact path='discover' element={<Discover />} />
